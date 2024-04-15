@@ -49,7 +49,7 @@ function fetchDonations() {
         const donationsList = document.getElementById('donations-list');
         reversedDonationsArray.forEach((donation) => {
             const listItem = document.createElement('li');
-            listItem.textContent = `${donation.donorName} ने ₹${donation.donatedAmount} का दान किया।`;
+            listItem.textContent = `${donation.donorName} ने ₹${donation.donatedAmount} का दान किया।` ${donation.date} 'को।' ;
             donationsList.appendChild(listItem);
         });
     });
