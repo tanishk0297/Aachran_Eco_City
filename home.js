@@ -5,7 +5,7 @@ function fetchDonations() {
     const donationsArray = []; // Array to store donation details
 
     base('Donations').select({
-        maxRecords: 10,
+        maxRecords: 10000,
         view: 'Grid view'
     }).eachPage((records, fetchNextPage) => {
         records.forEach((record) => {
@@ -60,7 +60,7 @@ function fetchExpenditures() {
     const expendituresArray = []; // Array to store expenditure details
 
     base('Expenditures').select({
-        maxRecords: 10,
+        maxRecords: 10000,
         view: 'Grid view'
     }).eachPage((records, fetchNextPage) => {
         records.forEach((record) => {
