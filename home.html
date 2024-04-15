@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आचरण इको सिटी मंदिर दान और व्यय ट्रैकर</title>
+    <link rel="stylesheet" href="styles.css"> <!-- आपके CSS फ़ाइल का लिंक -->
+</head>
+<body>
+    <div class="container">
+        <h1>आचरण इको सिटी मंदिर</br>दान और व्यय ट्रैकर</h1>
+        
+        <!-- कुल बजट काउंटर -->
+        <section id="total-budget">
+            <h2>उपलब्ध कुल बजट</h2>
+            <p id="budget-amount">0</p>
+            
+        </section>
+        <!-- दान/व्यय जोड़ने का फ़ॉर्म -->
+
+
+    </div>
+    <div class="container">
+         <!-- दान सेक्शन -->
+         <section id="donations">
+            
+            <h2>दान</h2>
+            <ul id="donations-list">
+                <!-- यहां दान डाइनामिक रूप से प्रदर्शित किए जाएंगे -->
+            </ul>
+        </section>
+
+        <!-- व्यय सेक्शन -->
+        <section id="expenditures">
+            <h2>व्यय</h2>
+            <ul id="expenditures-list">
+                <!-- यहां व्यय डाइनामिक रूप से प्रदर्शित किए जाएंगे -->
+            </ul>
+        </section>
+        <footer>
+            <p style="font-weight: bold;">अपडेट किए गए डेटा देखने के लिए कृपया अपने पेज को रिफ्रेश करें।</p>
+            <p>यह वेबसाइट द्वारा प्रदर्शित डेटा केवल सूचना के लिए है।</p>
+            <p>सभी अधिकार सुरक्षित। &copy; 2024</p>
+        </footer>
+        
+    </div>
+    
+ 
+  
+    <!-- Airtable SDK को सीधे शामिल करें -->
+    <script src="/airtable.browser.js"></script>
+
+    <!-- आपके JavaScript फ़ाइल का लिंक -->
+    <script src="home.js"></script>
+</body>
+</html>

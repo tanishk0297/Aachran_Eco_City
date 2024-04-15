@@ -1,0 +1,150 @@
+/* Reset and Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(248, 249, 250, 0.5); /* Adjust the opacity of the background color */
+    background-image: url('abg.png'); /* Your background image */
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat; /* Adjust as needed */
+    opacity: .92; /* Adjust the opacity of the background image */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* background-image: url('abg.png'); */
+}
+
+/* Headings */
+h1 {
+    font-size: 30px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
+  
+    
+}
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* Sections */
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input, button {
+    margin-bottom: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:focus, button:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.6);
+}
+
+/* Buttons */
+/* Buttons */
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 1px; /* Adjust spacing between letters */
+    font-weight: bold; /
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.4); /* Adjust as needed */
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+
+/* Total Budget Section */
+#total-budget {
+    text-align: center;
+}
+
+#budget-amount {
+    font-size: 28px;
+    color: #28a745;
+}
+
+/* List Items */
+#donations-list li,
+#expenditures-list li {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#donations-list li:nth-child(even),
+#expenditures-list li:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* style.css */
+
+footer {
+    background-color: #ffffff; /* Light gray background */
+    padding: 20px; /* Add padding for spacing */
+    text-align: center; /* Center align the text */
+    position: flex; /* Position the footer at the bottom of the viewport */
+    width: 100%; /* Full width */
+    bottom: 0; /* Stick to the bottom */
+}
+
+footer p {
+    margin: 10px 0; /* Add margin to separate paragraphs */
+    font-size: 17px; /* Set font size */
+    color: #333; /* Dark gray text color */
+}
