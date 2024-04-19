@@ -148,3 +148,14 @@ footer p {
     font-size: 17px; /* Set font size */
     color: #333; /* Dark gray text color */
 }
+
+/* Style for month names */
+.month-name {
+    font-size: 1.5em; /* Increase font size */
+    font-weight: bold;
+    margin-top: 20px; /* Add more top margin for better spacing */
+    margin-bottom: 10px; /* Adjust bottom margin */
+    color: #553c9a; /* Purple color for the month names */
+    text-align: center; /* Center-align the month names */
+}
+

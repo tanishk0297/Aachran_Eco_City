@@ -2,7 +2,7 @@ const Airtable = require('airtable');
 const base = new Airtable({ apiKey: 'patfV0JYulSU9DOcp.08809586e440b983a0b352100b784d46a6b1532fa1a9b4eef0d943fcc819d695' }).base('appX0bF1xKYfzn8rA');
 
 function fetchDonations() {
-    const donationsArray = []; // Array to store donation details
+    const donationsByMonth = {}; // Object to store donations grouped by month
 
     base('Donations').select({
         maxRecords: 10000,
@@ -11,19 +11,24 @@ function fetchDonations() {
         records.forEach((record) => {
             const donorName = record.get('Donor Name');
             const donatedAmount = record.get('Donated Amount');
-            const date = new Date(record.get('Date')).toLocaleString();
-
+            const date = new Date(record.get('Date'));
+            const monthName = date.toLocaleString('hi', { month: 'long' }); // Extract month name
+            
             // Log donation details to the console
             console.log('Donor Name:', donorName);
             console.log('Donated Amount:', donatedAmount);
-            console.log('Date:', date);
+            console.log('Date:', date.toLocaleString());
             console.log('---');
 
-            // Push donation details to the array
-            donationsArray.push({
+            // Group donations by month
+            if (!donationsByMonth[monthName]) {
+                donationsByMonth[monthName] = [];
+            }
+
+            donationsByMonth[monthName].push({
                 donorName: donorName,
                 donatedAmount: donatedAmount,
-                date: date
+                date: date.toLocaleString()
             });
         });
 
@@ -34,26 +39,24 @@ function fetchDonations() {
             return;
         }
 
-        // Reverse the array of donation details
-        const reversedDonationsArray = donationsArray.reverse();
-
-        // Print reversed donation details to the console
-        reversedDonationsArray.forEach((donation) => {
-            console.log('Donor Name:', donation.donorName);
-            console.log('Donated Amount:', donation.donatedAmount);
-            console.log('Date:', donation.date);
-            console.log('---');
-        });
-
-        // Append reversed list items to donations list
+        // Render donations grouped by month
         const donationsList = document.getElementById('donations-list');
-        reversedDonationsArray.forEach((donation) => {
-            const listItem = document.createElement('li');
-            listItem.textContent = `${donation.donorName} ने ₹${donation.donatedAmount} का दान किया, तारीख: ${donation.date}।`;
-            donationsList.appendChild(listItem);
-        });
+        for (const monthName in donationsByMonth) {
+            const monthDonations = donationsByMonth[monthName].reverse(); // Reverse the array
+            const monthHeader = document.createElement('h3');
+            monthHeader.textContent = monthName;
+            monthHeader.classList.add('month-name'); 
+            donationsList.appendChild(monthHeader);
+
+            monthDonations.forEach((donation) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${donation.donorName} ने ₹${donation.donatedAmount} का दान किया, तारीख: ${donation.date}।`;
+                donationsList.appendChild(listItem);
+            });
+        }
     });
 }
+
 
 
 

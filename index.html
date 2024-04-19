@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>आचरण इको सिटी मंदिर दान और व्यय ट्रैकर</title>
-    <link rel="stylesheet" href="styles.css"> <!-- आपके CSS फ़ाइल का लिंक -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
     <div class="container">
         <h1>आचरण इको सिटी मंदिर</br>दान और व्यय ट्रैकर</h1>
         
-        <!-- कुल बजट काउंटर -->
+        <!-- Total Budget Counter -->
         <section id="total-budget">
             <h2>उपलब्ध कुल बजट</h2>
             <p id="budget-amount">0</p>
-            
         </section>
-        <!-- दान/व्यय जोड़ने का फ़ॉर्म -->
+
+        <!-- Donation/Expenditure Form -->
         <section id="add-form">
             <h2>दान या व्यय जोड़ें</h2>
             <form id="form">
@@ -30,39 +30,36 @@
                 <button type="submit" id="add-expenditure">व्यय जोड़ें</button>
             </form>
         </section>
-
     </div>
+
+    <!-- Donations and Expenditures Sections -->
     <div class="container">
-         <!-- दान सेक्शन -->
-         <section id="donations">
-            
+        <section id="donations">
             <h2>दान</h2>
             <ul id="donations-list">
-                <!-- यहां दान डाइनामिक रूप से प्रदर्शित किए जाएंगे -->
+                <!-- Donation records will be dynamically added here -->
             </ul>
         </section>
 
-        <!-- व्यय सेक्शन -->
         <section id="expenditures">
             <h2>व्यय</h2>
             <ul id="expenditures-list">
-                <!-- यहां व्यय डाइनामिक रूप से प्रदर्शित किए जाएंगे -->
+                <!-- Expenditure records will be dynamically added here -->
             </ul>
         </section>
-        
     </div>
+
+    <!-- Clear Data Section -->
     <div class="container">
         <button id="clear-donations">दान साफ करें</button>
         <button id="clear-expenditures">व्यय साफ करें</button>
         <p>ध्यान दें कि इससे डेटा साफ़ हो जाएगा और इसे पुनर्प्राप्त नहीं किया जा सकेगा</p>
-        
-
     </div>
   
-    <!-- Airtable SDK को सीधे शामिल करें -->
+    <!-- Include the Airtable SDK -->
     <script src="/airtable.browser.js"></script>
 
-    <!-- आपके JavaScript फ़ाइल का लिंक -->
+    <!-- Link to your JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
